@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+    <style>
+        div{
+            background-color: aquamarine;
+            height: 300px;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            line-height: 300px;
+            font-size: 2em;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="L">Cadê o seu mouse?</div>
+    <script>
+        var l = window.document.getElementById('L')
+        l.addEventListener('mouseenter', entrou)
+        l.addEventListener('mouseleave', exit)
+        l.addEventListener('click', clicou)
+        l.addEventListener('mousedown', segurar)
+
+        function entrou(){
+            l.innerText = 'Entrou!'
+            l.style.background = 'Green'
+        }
+        function exit(){
+            l.innerText = 'Saiu!'
+            //l.style.background = 'Aquamarine'
+        }
+        function clicou(){
+            l.innerText = 'Clicou!'
+            l.style.background = 'Red'
+        }
+        function segurar(){
+            l.innerText='Segurou!'
+            l.style.background='Yellow'
+            
+        }
+    </script>
+</body>
+</html>
