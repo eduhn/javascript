@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            background-color: #6689A1;
+            color: #F6F740;
+            font-size: 1.5em;
+        }
+
+        div {
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digite os numeros para a soma:</h1>
+    <input type="number" name="a" id="n1">
+    <input type="number" name="b" id="n2">
+    <input type="button" value="Somar" onclick="Somar()">
+    <div id="res">Sua conta resulta em..</div>
+<script>
+    function Somar(){
+
+    var n1n = window.document.querySelector('input#n1')
+    var n2n = window.document.querySelector('input#n2')
+    var s = window.document.querySelector('div#res')
+
+    n1n = Number(n1n.value)
+    n2n = Number(n2n.value)
+
+    t = n1n + n2n
+
+    s.innerHTML = `Sua conta resulta em ${t}`
+    }
+</script>
+</body>
+</html>
