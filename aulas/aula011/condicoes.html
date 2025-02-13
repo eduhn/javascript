@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+
+        input#bt {
+            margin-left: 20px;
+        }
+
+        main {
+            margin: auto;
+            text-align: center;
+            max-width: 700px;
+            background-color: rgba(0, 191, 255, 0.392);
+            border: 2px solid black;
+        }
+
+        main>div {
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+        main>div#res {
+            padding: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Verificação de Multas</h1>
+        <div>Qual era sua velocidade?</div>
+        <input type="text" id="vel"> km/h
+        <input type="button" value="Verificar" onclick="calcular()" id="bt">
+        <div id="res"></div>
+    </main>
+    <script>
+        function calcular() {
+            var v = Number(window.document.querySelector('input#vel').value)
+            var r = window.document.querySelector('div#res')
+
+            if (v <= 80) {
+                r.innerHTML = `Está tudo bem, a velocidade ${v}km/h é aceita!<br>Continue respeitando as leis!`
+            }
+            else {
+                r.innerHTML = `${v}km/h está acima do limite de 80km/h!<br>Você infelizmente foi multado..`
+            }
+        }
+    </script>
+</body>
+
+</html>

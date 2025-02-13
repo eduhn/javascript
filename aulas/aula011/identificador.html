@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Id</title>
+    <style>
+        :root {
+            ---cor1: #00875B;
+            ---cor2: #25008C;
+            ---cor3: #B9C800;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        body {
+            background-color: var(---cor1);
+        }
+
+        main {
+            background-color: #11013fe9;
+            color: var(---cor3);
+            margin: auto;
+            margin-top: 100px;
+            max-width: 700px;
+            padding: 20px;
+            box-shadow: 6px 6px 20px #25008C;
+            border: 1px solid black;
+        }
+
+        main>h1 {
+            padding-bottom: 10px;
+        }
+
+        input {
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Identificador</h1>
+        <p>Olá,... <br>Como te chamo referenciando sua nacionalidade.. não sabe?<br>Então vamos utilizar o meu
+            programinha :)</p>
+        <input type="text" id="re"> -
+        <input type="button" value="Fazer super exame de nacionalidade" onclick="Calcular()">
+        <div id="cx">Digite seu pais natal</div>
+    </main>
+    <script>
+        function Calcular() {
+            var r = document.querySelector('input#re').value
+            var c = document.querySelector('div#cx')
+            var p = 'Brasil'
+            var p1 = 'brasil'
+
+            if (r == p || r == p1) {
+                c.innerHTML = `${r}! Aah, brasileiro! Você é meu comparsa!`
+            }
+            else {
+                c.innerHTML = `${r}? Ah, você não é do Brasil.. Seu país fica no mundo..?`
+            }
+        }
+    </script>
+</body>
+
+</html>
