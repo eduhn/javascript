@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+body{
+    background-color: cornflowerblue;
+    font: normal 1em Arial;
+}
+header>h1{
+    color: white;
+    text-align: center;
+}
+section{
+    background-color: aliceblue;
+    margin: auto;
+    max-width: 500px;
+    padding: 10px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.282);
+    border-radius: 7px;
+}
+footer{
+    margin-top: 30px;
+    color: aliceblue;
+    text-align: center;
+}
