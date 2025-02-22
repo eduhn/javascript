@@ -1,24 +1,27 @@
 @charset 'UTF8';
 
-*{
+* {
     margin: 0px;
     padding: 0px;
 
 }
 
-body{
+body {
     background-color: antiquewhite;
 }
-header{
+
+header {
     background-color: white;
 }
-h1{
+
+h1 {
     color: rgb(117, 1, 1);
     text-align: center;
     padding-top: 15px;
     padding-bottom: 20px;
 }
-main{
+
+main {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     padding: 10px 22px;
@@ -26,9 +29,12 @@ main{
     margin: auto;
     border-radius: 0px 0px 4px 4px;
 }
-    #chama, .bl{
-        padding-bottom: 10px;
-    }
-#saida{
+
+#chama,
+.bl {
+    padding-bottom: 10px;
+}
+
+#saida {
     padding-top: 15px;
 }

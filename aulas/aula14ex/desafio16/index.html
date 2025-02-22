@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ex de Contagem Espaçada</title>
     <style>
-        *{
+        * {
             margin: 0px;
             position: 0px;
         }
-        body{
+
+        body {
             background-color: rgba(0, 0, 0, 0.765);
             color: #66C7F4;
         }
 
-            div{
-                margin: auto;
-                max-width: max-content;
-            }
-            p{
-                margin-top: 10px;
-            }
+        div {
+            margin: auto;
+            max-width: max-content;
+        }
 
-                div>input#btn{
-                    padding: 3px 10px;
-                    margin: 10px 0px;
-                }
+        p {
+            margin-top: 10px;
+        }
 
-            div#res{
-                max-width: 400px;
-            }
-            div#res>p{
-                display: inline;
-                margin: 10px;
-            }
-            div#res>h2{
-                padding-top: 10px;
-                max-width: fit-content;
-                margin: auto;
-            }
+        div>input#btn {
+            padding: 3px 10px;
+            margin: 10px 0px;
+        }
+
+        div#res {
+            max-width: 400px;
+        }
+
+        div#res>p {
+            display: inline;
+            margin: 10px;
+        }
+
+        div#res>h2 {
+            padding-top: 10px;
+            max-width: fit-content;
+            margin: auto;
+        }
     </style>
 </head>
+
 <body>
-        <div>
-            <h1 id="a">Hi!</h1>
-            <p>Coloque o número divisível</p>
-            <input type="number" name="number" id="nmr1">
+    <div>
+        <h1 id="a">Hi!</h1>
+        <p>Coloque o número divisível</p>
+        <input type="number" name="number" id="nmr1">
 
-            <p>Coloque o número dividor</p>
-            <input type="number" name="number" id="nmr2"><br>
+        <p>Coloque o número dividor</p>
+        <input type="number" name="number" id="nmr2"><br>
 
-            <input id="btn" type="button" value="Fazer a conta" onclick="fc()">
-        </div>
-        
-        <div id="res"></div>
-        
+        <input id="btn" type="button" value="Fazer a conta" onclick="fc()">
+    </div>
+
+    <div id="res"></div>
+
     <script src="scrpit.js"></script>
 </body>
+
 </html>

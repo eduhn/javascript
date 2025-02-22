@@ -9,3 +9,8 @@ for (b; b <= a; b = b + c) {
 }
 
 console.log(`Fim! Foi necessário ${d} x ${c} para ${a}`);
+
+//-----------
+/*
+Este arquivo serve para testar a lógica do código 16..
+*/

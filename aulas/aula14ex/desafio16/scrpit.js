@@ -8,13 +8,13 @@ function fc() {
     var n3 = Number(dvd.value);
     var c = 0;
 
-    r.innerHTML='';
+    r.innerHTML = '';
 
     for (n2; n2 <= n1; n2 = n2 + n3) {
         var p = document.createElement("p")
         p.textContent = `|✔️ ${n2}|`;
         r.appendChild(p);
-        
+
         var c = c + 1;
     }
     var t = document.createElement('h2');
