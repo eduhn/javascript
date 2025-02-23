@@ -6,6 +6,11 @@ function resul() {
     var anor = ano.getFullYear();
 
     if (sex.value == 'masc') {
-        res.innerHTML = `Você é um homem`
+        var a = document.createElement('p')
+        a.textContent = `Você é um Homem`
+        res.appendChild(a)
     }
+        else{
+            alert(`oi`)
+        }
 }

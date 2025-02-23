@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Tabuada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin: 0 0 20px 0;
+        }
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #resultado {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Tabuada</h1>
+        <select id="tabuada" onchange="tabuada()">
+            <option value="0">Selecione a tabuada</option>
+            <option value="1">Tabuada do 1</option>
+            <option value="2">Tabuada do 2</option>
+            <option value="3">Tabuada do 3</option>
+            <option value="4">Tabuada do 4</option>
+            <option value="5">Tabuada do 5</option>
+            <option value="6">Tabuada do 6</option>
+            <option value="7">Tabuada do 7</option>
+            <option value="8">Tabuada do 8</option>
+            <option value="9">Tabuada do 9</option>
+            <option value="10">Tabuada do 10</option>
+        </select>
+        <div id="resultado"></div>
+    </div>
+    <script>
+        function tabuada() {
+            let tabuada = document.querySelector('#tabuada').value;
+            let resultado = document.querySelector('#resultado');
+            resultado.innerHTML = '';
+
+            if (tabuada == 0) {
+                resultado.innerHTML = 'Selecione uma tabuada';
+            } else {
+                for (let i = 1; i <= 10; i++) {
+                    resultado.innerHTML += `${tabuada} x ${i} = ${tabuada * i}<br>`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
