@@ -1,16 +1,16 @@
 function fc() {
     var dvv = document.querySelector("#nmr1");
-    var dvd = document.querySelector("#nmr2");
+    var dvs = document.querySelector("#nmr2");
     var r = document.querySelector("#res");
 
-    var n1 = Number(dvv.value);
-    var n2 = Number(dvd.value);
-    var n3 = Number(dvd.value);
+    var inicio = Number(dvv.value);
+    var n2 = Number(dvs.value);
+    var n3 = Number(dvs.value);
     var c = 0;
 
     r.innerHTML = '';
 
-    for (n2; n2 <= n1; n2 = n2 + n3) {
+    for (n2; n2 <= inicio; n2 = n2 + n3) {
         var p = document.createElement("p")
         p.textContent = `|✔️ ${n2}|`;
         r.appendChild(p);
@@ -19,6 +19,6 @@ function fc() {
     }
     var t = document.createElement('h2');
     t.textContent = `Fim!
-    Foi necessário ${c} x ${n3} para ${n1}`;
+    Foi necessário ${c} x ${n3} para ${inicio}`;
     r.appendChild(t);
 }

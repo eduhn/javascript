@@ -1,67 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Tabuada</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+    <title>Tabuada</title>
+
+    <style>/*02020A*/
+        *{
             margin: 0;
             padding: 0;
         }
-        div {
+        :root{
+            ---cor5: #02020a;
+            ---cor4: #DDD92A;
+            ---cor3: #EAE151;
+            ---cor2: #EEEFA8;
+            ---cor1: #FAFDF6;
+        }
+        body{
+            background-color: var(---cor5);
+            color: var(---cor4);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #Container{
+            background-color: rgb(10, 10, 10);
+            padding: 13px;
+            margin: auto;
+            max-width: 420px;
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: solid 0px #EEEFA8;
+            border-radius: 42px;
+            margin-top: 50px;
+            box-shadow: #ddda2a5d 9px 5px 20px;
         }
-        h1 {
-            margin: 0 0 20px 0;
-        }
-        select {
+            #Container>h1{
+                padding: 10px 0px 20px 0px;
+            }
+            #Container>p{
+                padding: 0px 0px 10px 0px;
+            }
+            #Container>input{
+                margin: 0px 10px 0px 0px;
+                border-radius: 6px;
+                background-color: var(---cor1);
+                box-shadow: 0px 0px 2px var(---cor3);
+                text-align: center;
+
+            }
+            #Container>button{
+                border-radius: 8px;
+                background-color: var(---cor1);
+                padding: 1px 4px;
+                cursor: pointer;
+                box-shadow: 0px 
+                0px 2px var(---cor3);   
+            }
+        #Result{
+            background-color: var(---cor5);
             padding: 10px;
-            margin-bottom: 20px;
+            margin: auto;
+            max-width: 400px;
+            text-align: center;
+            border: solid 0px #EEEFA8;
+            border-radius: 22px;
+            margin-top: 30px;
+            box-shadow: #ddda2a43 7px 5px 13px;
         }
-        #resultado {
-            text-align: left;
-        }
+            #Result>h2{
+                padding: 10px 0px;
+                font-size: 1.2em;
+            }
+            #Result>p{
+                padding: 10px 0px;
+            }
     </style>
 </head>
-<body>
-    <div>
-        <h1>Tabuada</h1>
-        <select id="tabuada" onchange="tabuada()">
-            <option value="0">Selecione a tabuada</option>
-            <option value="1">Tabuada do 1</option>
-            <option value="2">Tabuada do 2</option>
-            <option value="3">Tabuada do 3</option>
-            <option value="4">Tabuada do 4</option>
-            <option value="5">Tabuada do 5</option>
-            <option value="6">Tabuada do 6</option>
-            <option value="7">Tabuada do 7</option>
-            <option value="8">Tabuada do 8</option>
-            <option value="9">Tabuada do 9</option>
-            <option value="10">Tabuada do 10</option>
-        </select>
-        <div id="resultado"></div>
-    </div>
-    <script>
-        function tabuada() {
-            let tabuada = document.querySelector('#tabuada').value;
-            let resultado = document.querySelector('#resultado');
-            resultado.innerHTML = '';
 
-            if (tabuada == 0) {
-                resultado.innerHTML = 'Selecione uma tabuada';
-            } else {
-                for (let i = 1; i <= 10; i++) {
-                    resultado.innerHTML += `${tabuada} x ${i} = ${tabuada * i}<br>`;
-                }
+<body>
+    <div id="Container">
+        <h1>Tabuada 0 a 10</h1>
+        <p>Insira um número:</p>
+        <input type="number" name="number" id="number">
+        <button type="button" id="button" onclick="solve()">Solve</button>
+    </div>
+
+    <div id="Result">
+        <h2>Sabia que 1 + 1 = 2?</h2>
+    </div>
+
+
+    <script>
+        function solve() {
+            var number = document.querySelector("#number");
+            var result = document.querySelector("div#Result");
+            var vezes = 0;
+
+            number = Number(number.value);
+            result.innerHTML = "";
+
+            for (vezes; vezes <= 10; vezes++) {
+                var container = document.createElement("p");
+                container.innerHTML = (`${number} X ${vezes} = ${number * vezes};`);
+                result.appendChild(container);
             }
+            number = 0;
         }
     </script>
 </body>
+
 </html>

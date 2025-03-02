@@ -5,7 +5,7 @@ function resul() {
     var ano = new Date();
     var anor = ano.getFullYear();
 
-    if (sex.value == 'masc') {
+    if (sex.value == "masc") {
         var a = document.createElement('p')
         a.textContent = `Você é um Homem`
         res.appendChild(a)
