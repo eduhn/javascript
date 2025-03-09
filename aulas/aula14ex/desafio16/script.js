@@ -1,34 +1,42 @@
 function Contar() {
-    var primeiro = document.querySelector("#inicio")
-    var ultimo = document.querySelector("#fim")
-    var passo = document.querySelector("#passo")
-    var resposta = document.querySelector("#resultado")
+    var primeiroElem = document.querySelector("#inicio");
+    var ultimoElem = document.querySelector("#fim");
+    var passoElem = document.querySelector("#passo");
+    var resposta = document.querySelector("#resultado");
 
-    var primeiro = Number(primeiro.value)
-    var primeiroR = primeiro
-    var ultimo = Number(ultimo.value)
-    var passo = Number(passo.value)
-    var vezes = -1
+    var primeiro = Number(primeiroElem.value);
+    var primeiroR = primeiro;
+    var ultimo = Number(ultimoElem.value);
+    var passo = Number(passoElem.value);
+    var vezes = 0;
 
-
-    if (passo == 0) {
-        resposta.innerHTML = `<strong>..revise os dados..</strong>`
+    if (passo <= 0) {
+        resposta.innerHTML = `<strong>..revise os dados..</strong>`;
+        return;
     }
-        else {
-            resposta.innerHTML = ``
 
-            for (primeiro; primeiro <= ultimo; primeiro += passo) {
-                vezes = vezes + 1
+    resposta.innerHTML = ``;
 
-                var a = document.createElement("p")
-                a.textContent = `${primeiro}; `
-                resposta.appendChild(a)
-            }
+    if (primeiro < ultimo) {
+        for (; primeiro <= ultimo; primeiro += passo) {
+            vezes++;
 
-            var vezesR = document.createElement("h3")
-            vezesR.textContent=`Saindo de ${primeiroR} para chegar em ${ultimo} temos que dar ${vezes} passos!`
-            resposta.appendChild(vezesR)
+            var a = document.createElement("p");
+            a.textContent = `${primeiro}; `;
+            resposta.appendChild(a);
         }
+    } else {
+        for (; primeiro >= ultimo; primeiro -= passo) {
+            vezes++;
+
+            var a = document.createElement("p");
+            a.textContent = `${primeiro}; `;
+            resposta.appendChild(a);
+        }
+    }
+    vezes=vezes-1
+
+    var vezesR = document.createElement("h3");
+    vezesR.textContent = `Saindo de ${primeiroR} para chegar em ${ultimo} temos que dar ${vezes} passos!`;
+    resposta.appendChild(vezesR);
 }
-//Texto do commit:
-//Alguns ajustes nos arquivos; Correção de objetivo do exercício e execução html, css e js completa e funcional.
